@@ -1,0 +1,9 @@
+[Unit]
+PartOf=bililive-systemd-webhook@.service
+
+[Socket]
+ListenStream=127.0.0.1:2346
+Accept=Yes
+
+[Install]
+WantedBy=sockets.target

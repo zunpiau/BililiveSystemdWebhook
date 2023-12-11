@@ -1,0 +1,9 @@
+[Unit]
+After=network.target bililive-systemd-webhook.socket
+Requires=bililive-systemd-webhook.socket
+
+[Service]
+Type=oneshot
+WorkingDirectory=~
+ExecStart=/bin/sh .local/bin/bililive-systemd-webhook.sh
+TimeoutSec=5
