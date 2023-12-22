@@ -6,4 +6,4 @@ Requires=bililive-systemd-webhook.socket
 Type=oneshot
 WorkingDirectory=~
 ExecStart=/bin/sh .local/bin/bililive-systemd-webhook.sh
-TimeoutSec=5
+KillMode=process
