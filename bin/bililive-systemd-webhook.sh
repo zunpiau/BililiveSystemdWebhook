@@ -1,11 +1,8 @@
 #!/bin/bash
 
 HOOK_DIR="bililive-systemd-webhook/hooks/"
-if [ -n "$XDG_CONFIG_HOME" ]; then
-    HOOK_PATH="$XDG_CONFIG_HOME/$HOOK_DIR"
-else
-    HOOK_PATH="$HOME/.config/$HOOK_DIR"
-fi
+
+HOOK_PATH="${XDG_CONFIG_HOME:-$HOME/.config}/$HOOK_DIR"
 
 content_length=0
 while :;  do
